@@ -1,0 +1,64 @@
+$header-link: rgba(45, 49, 64, 0.6);
+$header-link-dark: rgba(44, 9, 11, 1);
+
+@mixin button ($color) {
+    &__sign-up::after{
+		content: "";
+		display: inline-block;
+		height: 100%;
+		width: 100%;
+		background-color: $color;
+		border-radius: 1rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		transition: 0.2s;
+	}
+	&__sign-up:hover::after{
+		transform: scale(2);
+		opacity: 0;
+	}
+
+	&__sign-up:hover{
+		transform: translateY(0px);
+		box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+	}
+
+	&__sign-up:active{
+		transform: translateY(2px);
+		box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+	}
+    
+}
+
+@mixin button2 ($color) {
+    &::after{
+		content: "";
+		display: inline-block;
+		height: 100%;
+		width: 100%;
+		background-color: $color;
+		border-radius: 1rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		transition: 0.2s;
+	}
+	&:hover::after{
+		transform: scale(2);
+		opacity: 0;
+	}
+
+	&:hover{
+		transform: translateY(0px);
+		box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+	}
+
+	&:active{
+		transform: translateY(2px);
+		box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+	}
+    
+}
